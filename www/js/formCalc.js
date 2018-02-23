@@ -1,28 +1,22 @@
 
 function debugLog(toLog) {
 	var debug = true
-	if (debug) {alert(toLog)
-
-	}
-}
-function isAndroid(){
-	platform = device.cordova
-	alert(platform)
-	if(platform == 'android') {
-		return true
-	}
-	else {
-		return false
+	if (debug) {
+		alert(toLog)
 	}
 }
 
 var db = window.sqlitePlugin.openDatabase({
 	name: 'scoutingData.db',
 	location: 'default',
-	if (isAndroid) {
-		androidDatabaseImplementation: 2
-	}
+	androidDatabaseImplementation: 2
 });
+
+document.addEventListener('deviceready', function() {
+	window.sqlitePlugin.selfTest(function() {
+	  console.log('SELF test OK');
+	});
+  });
 
 function formCalc() {
 	var results = document.getElementById("working").value;
