@@ -6,17 +6,17 @@ function debugLog(toLog) {
 	}
 }
 
-var db = window.sqlitePlugin.openDatabase({
-	name: 'scoutingData.db',
-	location: 'default',
-	androidDatabaseImplementation: 2
-});
-
 document.addEventListener('deviceready', function() {
+	alert("Deviceready event fired")
 	window.sqlitePlugin.selfTest(function() {
-	  console.log('SELF test OK');
+	 	console.log('SELF test OK');
 	});
-  });
+	var db = window.sqlitePlugin.openDatabase({
+		name: 'scoutingData.db',
+		location: 'default',
+		androidDatabaseImplementation: 2
+	});
+});
 
 function formCalc() {
 	var results = document.getElementById("working").value;
