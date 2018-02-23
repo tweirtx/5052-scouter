@@ -1,10 +1,11 @@
 function formCalc() {
 	alert("formCalc called")
 	var results = document.getElementById("working").value;
-	alert('Results!'+results)
+	alert('Results! '+results)
 }
 alert("JS loaded")
-document.addEventListener('DOMContentReady', function (){
-document.getElementById('testButton').addEventListener('click', formCalc);
+document.addEventListener('DOMContentLoaded', function buttonPress(){
+	alert("In event listener")
+	document.getElementById('button').addEventListener("click", formCalc);
 });
 alert("Event listener added")
