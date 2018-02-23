@@ -9,6 +9,12 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "io.github.tweirtx.5052scout"
     }
   },
   "dependent_plugins": {}
