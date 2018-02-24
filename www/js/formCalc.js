@@ -7,8 +7,10 @@ function debugLog(toLog) {
 }
 
 document.addEventListener('deviceready', function() {
-	alert("Deviceready event fired")
-	window.sqlitePlugin.selfTest(function() {
+	alert("Deviceready event fired");
+})
+
+window.sqlitePlugin.selfTest(function() {
 	 	console.log('SELF test OK');
 	});
 	var db = window.sqlitePlugin.openDatabase({
@@ -16,7 +18,7 @@ document.addEventListener('deviceready', function() {
 		location: 'default',
 		androidDatabaseImplementation: 2
 	});
-});
+//});
 
 function formCalc() {
 	var results = document.getElementById("working").value;
