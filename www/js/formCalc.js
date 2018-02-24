@@ -10,14 +10,11 @@ document.addEventListener('deviceready', function() {
 	alert("Deviceready event fired");
 })
 
-window.sqlitePlugin.selfTest(function() {
-	 	console.log('SELF test OK');
-	});
-	var db = window.sqlitePlugin.openDatabase({
-		name: 'scoutingData.db',
-		location: 'default',
-		androidDatabaseImplementation: 2
-	});
+var db = window.indexedDB.open('scoutingData.db', 1);
+//	name: 'scoutingData.db',
+//	location: 'default',
+//	androidDatabaseImplementation: 2
+//});
 //});
 
 function formCalc() {
