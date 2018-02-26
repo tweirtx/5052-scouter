@@ -1,0 +1,25 @@
+{
+    "match" : [
+        {
+            "name" : "team_number",
+            "type" : "int",
+            "csv_index" : 0 
+        },
+        {
+            "name" : "match_number",
+            "type" : "int",
+            "csv_index" : 1
+        },
+        {
+            "name" : "alliance",
+            "type" : "dropdown",
+            "csv_index" : 2
+        },
+        {
+            "name" : "power-up",
+            "type" : "dropdown",
+            "options" : ["force", "levitate", "boost"],
+            "csv_index" : 3
+        }
+    ]
+}
