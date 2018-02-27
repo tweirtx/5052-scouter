@@ -1,0 +1,10 @@
+App flow:
+Scouter fills out form (index.html)
+Scouter repeats until done
+Scouter returns to pit
+Scouter accesses QR page
+Computer operator loads QR-scanning program
+Scouter holds phone up until QR is scanned
+Computer program scans QR, decodes, and adds data to database or CSV
+Repeat until all codes taken care of
+Scouter marks batch as complete
