@@ -1,4 +1,4 @@
-
+var storage = window.localStorage;
 
 function formCalc() {
 	var results = document.getElementById("working").value;
@@ -9,12 +9,11 @@ function formCalc() {
 		element: qrelement,
 		value: toQR
 	});
-	//qrelement.value = generatedQR
+	storage.setItem('test', generatedQR);
 }
 
 document.addEventListener('DOMContentLoaded', function buttonPress(){
 	document.getElementById('button').addEventListener("click", formCalc);
 });
-
 
 alert("JS reached EOF");
