@@ -1,11 +1,14 @@
-import * from qrcode;
+
 
 function formCalc() {
 	var results = document.getElementById("working").value;
 	alert("The form returned " + results);
 	var toQR = "test: "+results;
 	var qrelement = document.getElementById('qrcode');
-	var generatedQR = qrcode.makeCode(qrelement, toQR);
+	var generatedQR = new QRious({
+		element: qrelement,
+		value: toQR
+	});
 	//qrelement.value = generatedQR
 }
 
@@ -14,4 +17,4 @@ document.addEventListener('DOMContentLoaded', function buttonPress(){
 });
 
 
-alert("BOO!")
+alert("JS reached EOF");
