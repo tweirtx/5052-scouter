@@ -1,6 +1,14 @@
 var storage = window.localStorage;
-function qrGenerate() {
-	var toQR = storage.getItem('scoutForm0');
+var currententry = -1;
+var entries = -1;
+for (var i in storage) {
+	if (i.startsWith('scoutForm')) {
+		entries += 1;
+	}
+}
+
+function qrGenerate(entry) {
+	var toQR = storage.getItem('scoutForm'+entry);
 	var qrelement = document.getElementById('qrcode');
 	var generatedQR = new QRious({
 		element: qrelement,
@@ -8,4 +16,15 @@ function qrGenerate() {
 	});
 }
 
-document.addEventListener('DOMContentLoaded', qrGenerate)
+function advanceQR() {
+	currententry += 1
+	if (currententry == entries) {
+		currententry = 0;
+	}
+	qrGenerate(currententry);
+}
+
+document.addEventListener('DOMContentLoaded', advanceQR);
+document.addEventListener('DOMContentLoaded', function buttonPress(){
+	document.getElementById('nextQR').addEventListener("click", advanceQR);
+});
