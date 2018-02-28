@@ -10,7 +10,9 @@ function formCalc() {
 			'response': formElement.value
 		};
 		console.log(formData);
-		finalKeys.push(formData);
+		var formDataString = JSON.stringify(formData);
+		console.log(formDataString);
+		finalKeys.push(formDataString);
 	}
 	console.log(finalKeys);
 	var entries = -1;
@@ -20,7 +22,9 @@ function formCalc() {
 		}
 	}
 	var newentry = entries + 1;
-	storage.setItem('scoutForm'+newentry, finalKeys);
+	console.log(finalKeys)
+	var finalKeysString = finalKeys.toString();
+	storage.setItem('scoutForm'+newentry, finalKeysString);
 	alert("Form calculated");
 }
 
