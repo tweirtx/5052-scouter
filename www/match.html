@@ -50,17 +50,13 @@
         <br>
         <input type="number" id='matchNumber'>
         <br>
-        <h3>Autonomous Score</h3>
+        <h3>How many cubes were manipulated in auto?</h3>
         <br>
-        <input type="number" id="autonScore">
+        <input type='number' id='autoCubes>'>
         <br>
-        <h3>Teleop Score</h3>
+        <h3>How many cubes were manipulated in teleop?</h3>
         <br>
-        <input type="number" id="teleopScore">
-        <br>
-        <h3>How many cubes were manipulated in the match?</h3>
-        <br>
-        <input type='number' id='cubesUsed'>
+        <input type='number' id='teleopCubes'>
         <br>
         <h3>Can it pick up cubes?</h3>
         <br>
@@ -91,11 +87,31 @@
             <option value='maybe'>Maybe</option>
         </select>
         <br>
-        <h3>Which powerups were used?</h3>
+        <h2>Which powerups were used?</h2>
         <br>
-        <input type='checkbox' name='boost' value='boost'>Boost<br>
-        <input type='checkbox' name='force' value='force'>Force<br>
-        <input type='checkbox' name='levitate' value='levitate'>Levitate<br>
+        <h3>Force</h3>
+        <br>
+        <select id='force'>
+            <option value='0'>Not Used</option>
+            <option value='1'>Level 1</option>
+            <option value='2'>Level 2</option>
+            <option value='3'>Level 3</option>
+        </select>
+        <br>
+        <h3>Boost</h3>
+        <br>
+        <select id='boost'>
+            <option value='0'>Not Used</option>
+            <option value='1'>Level 1</option>
+            <option value='2'>Level 2</option>
+            <option value='3'>Level 3</option>
+        </select>
+        <br>
+        <h3>Levitate</h3>
+        <br>
+        <input type="checkbox" id='levitate'>
+        <br>
+        <br>
         <h3>What strategy did you see?</h3>
         <br>
         <input type="text" id='strategy'>
