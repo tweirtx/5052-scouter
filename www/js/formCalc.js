@@ -1,5 +1,9 @@
 var storage = window.localStorage;
 
+function resetForm() {
+	document.getElementById('form').reset();
+}
+
 function formCalc() {
 	var elements = document.forms['form'].elements;
 	var finalKeys = [];
@@ -26,8 +30,10 @@ function formCalc() {
 	var finalKeysString = finalKeys.toString();
 	storage.setItem('scoutForm'+newentry, finalKeysString);
 	alert("Form calculated");
+	resetForm();
 }
 
 document.addEventListener('DOMContentLoaded', function buttonPress(){
 	document.getElementById('button').addEventListener("click", formCalc);
+	resetForm();
 });

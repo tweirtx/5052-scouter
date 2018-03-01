@@ -7,6 +7,12 @@ for (var i in storage) {
 	}
 }
 
+function markScanned(entry) {
+	var currentlyRead = storage.getItem('scannedForms');
+	var newScannedForms = currententry.join(entry);
+	storage.setItem('scannedForms', newScannedForms);
+}
+
 function qrGenerate(entry) {
 	var toQR = storage.getItem('scoutForm'+entry);
 	var qrelement = document.getElementById('qrcode');
@@ -15,6 +21,7 @@ function qrGenerate(entry) {
 		element: qrelement,
 		value: toQR
 	});
+
 }
 
 function advanceQR() {
@@ -28,4 +35,5 @@ function advanceQR() {
 document.addEventListener('DOMContentLoaded', advanceQR);
 document.addEventListener('DOMContentLoaded', function buttonPress(){
 	document.getElementById('nextQR').addEventListener("click", advanceQR);
+	document.getElementById('markScanned').addEventListener('click', markScanned);
 });
