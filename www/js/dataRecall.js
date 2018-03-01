@@ -11,6 +11,7 @@ function qrGenerate(entry) {
 	var toQR = storage.getItem('scoutForm'+entry);
 	var qrelement = document.getElementById('qrcode');
 	var generatedQR = new QRious({
+		size: 200,
 		element: qrelement,
 		value: toQR
 	});
