@@ -34,7 +34,6 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-       <!-- <script src="js/json-forms-master/dist/js/brutusin-json-forms.min.js"></script> !-->
         <script type="text/javascript" src="js/qrious.js"></script>
 	    <script type="text/javascript" src="js/formCalc.js"></script>
 	    <title>Team 5052 Scouting</title>
@@ -42,8 +41,62 @@
     <body>
 	<p>Hello world!</p>
     <form id='form'>
-        <input type="number" id='numberInput'>
+        <h3>Team Name and Number</h3>
+        <br>
+        <input type="text" id='teamNameAndNumber'>
+        <br>
+        <h3>Score</h3>
+        <br>
+        <input type="number" id="score">
+        <br>
+        <h3>Is it good at picking up cubes?</h3>
+        <br>
+        <select id='cubePickup'>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+            <option value='maybe'>Maybe</option>
+        </select>
+        <h3>Is it good at exchanging cubes?</h3>
+        <br>
+        <select id='cubeExchange'>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+            <option value='maybe'>Maybe</option>
+        </select>
+        <h3>Is it good at placing cubes on the switch?</h3>
+        <br>
+        <select id='cubeSwitch'>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+            <option value='maybe'>Maybe</option>
+        </select>
+        <h3>Is it good at placing cubes on the scale?</h3>
+        <br>
+        <select id='cubeScale'>
+            <option value='yes'>Yes</option>
+            <option value='no'>No</option>
+            <option value='maybe'>Maybe</option>
+        </select>
+        <br>
+        <h3>Which powerups were used?</h3>
+        <br>
+        <input type='checkbox' name='boost' value='boost'>Boost<br>
+        <input type='checkbox' name='force' value='force'>Force<br>
+        <input type='checkbox' name='levitate' value='levitate'>Levitate<br>
+        <h3>What strategy did you see?</h3>
+        <br>
+        <input type="text" id='strategy'>
+        <br>
+        <h3>Robot problems?</h3>
+        <br>
+        <input type="text" id='problems'>
+        <br>
+        <h3>Anything to note?</h3>
+        <br>
+        <input type='text' id='comments'>
+        <br>
     </form>
+    <br>
     <input type="button" id="button" value="button">
     <a href='dataRecall.html'>Recall QR codes</a>
     </body>
