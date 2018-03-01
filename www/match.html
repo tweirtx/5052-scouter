@@ -42,36 +42,48 @@
     <a href='index.html'>Back</a>
     <form id='form'>
         <input type="hidden" id='matchOrPit' value="match">
-        <h3>Team Name and Number</h3>
+        <h3>Team Number</h3>
         <br>
-        <input type="text" id='teamNameAndNumber'>
+        <input type='number' id='teamNumber'>
         <br>
-        <h3>Score</h3>
+        <h3>Match Number</h3>
         <br>
-        <input type="number" id="score">
+        <input type="number" id='matchNumber'>
         <br>
-        <h3>Is it good at picking up cubes?</h3>
+        <h3>Autonomous Score</h3>
+        <br>
+        <input type="number" id="autonScore">
+        <br>
+        <h3>Teleop Score</h3>
+        <br>
+        <input type="number" id="teleopScore">
+        <br>
+        <h3>How many cubes were manipulated in the match?</h3>
+        <br>
+        <input type='number' id='cubesUsed'>
+        <br>
+        <h3>Can it pick up cubes?</h3>
         <br>
         <select id='cubePickup'>
             <option value='yes'>Yes</option>
             <option value='no'>No</option>
             <option value='maybe'>Maybe</option>
         </select>
-        <h3>Is it good at exchanging cubes?</h3>
+        <h3>Can it exchange cubes?</h3>
         <br>
         <select id='cubeExchange'>
             <option value='yes'>Yes</option>
             <option value='no'>No</option>
             <option value='maybe'>Maybe</option>
         </select>
-        <h3>Is it good at placing cubes on the switch?</h3>
+        <h3>Can it place cubes on the switch?</h3>
         <br>
         <select id='cubeSwitch'>
             <option value='yes'>Yes</option>
             <option value='no'>No</option>
             <option value='maybe'>Maybe</option>
         </select>
-        <h3>Is it good at placing cubes on the scale?</h3>
+        <h3>Can it place cubes on the scale?</h3>
         <br>
         <select id='cubeScale'>
             <option value='yes'>Yes</option>

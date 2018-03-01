@@ -1,0 +1,10 @@
+To-do on app:
+Team number: int only, no name DONE
+Add match number DONE
+Differentiate auton/teleop scores DONE
+Change good to can/cannot DONE
+Power cube levels
+Change rating slider to drop-down DONE
+Make system to keep track of scanned QR codes (localStorage array with scanned entry numbers)
+Make an easy button to reset the form (and do it automatically)
+Add number of power cubes used in a match DONE

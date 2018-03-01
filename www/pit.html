@@ -43,9 +43,9 @@
     <a href='index.html'>Back</a>
     <form id='form'>
         <input type="hidden" id='matchOrPit' value="pit">
-        <h3>Team name and number</h3>
+        <h3>Team number</h3>
         <br>
-        <input type="text" id='nameAndNumber'>
+        <input type="number" id='teamNumber'>
         <br>
         <h3>Does it climb?</h3>
         <br>
@@ -62,21 +62,21 @@
             <option value='offense'>Offense</option>
             <option value='both'>Both</option>
         </select>
-        <h3>Is it good at exchanging cubes?</h3>
+        <h3>Can it exchange cubes?</h3>
         <br>
         <select id='cubeExchange'>
             <option value='yes'>Yes</option>
             <option value='no'>No</option>
             <option value='maybe'>Maybe</option>
         </select>
-        <h3>Is it good at placing cubes on the switch?</h3>
+        <h3>Can it place cubes on the switch?</h3>
         <br>
         <select id='cubeSwitch'>
             <option value='yes'>Yes</option>
             <option value='no'>No</option>
             <option value='maybe'>Maybe</option>
         </select>
-        <h3>Is it good at placing cubes on the scale?</h3>
+        <h3>Can it place cubes on the scale?</h3>
         <br>
         <select id='cubeScale'>
             <option value='yes'>Yes</option>
@@ -92,7 +92,18 @@
         <br>
         <h3>Give a rating on how compatible this bot is with ours</h3>
         <br>
-        <input type="range" id='rating' min='1' max='10'>
+        <select id='compatibilityRating'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+        </select>
         <br>
         <h3>Anything to note?</h3>
         <br>
