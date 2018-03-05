@@ -1,30 +1,19 @@
 var storage = window.localStorage;
 var currententry = -1;
 var entries = -1;
-var entry = 0;
-
-scannedForms = storage.getItem('scannedForms');
-try {
-	console.log(scannedForms);
-}
-catch (ReferenceError) {
-	storage.setItem('scannedForms', '')
-}
-
 for (var i in storage) {
 	if (i.startsWith('scoutForm')) {
 		entries += 1;
 	}
 }
 
-function markScanned() {
+function markScanned(entry) {
 	var currentlyRead = storage.getItem('scannedForms');
-	var newScannedForms = String(Number(currententry)+entry);
+	var newScannedForms = currententry.join(entry);
 	storage.setItem('scannedForms', newScannedForms);
-	alert('Successfully marked as scanned')
 }
 
-function qrGenerate() {
+function qrGenerate(entry) {
 	var toQR = storage.getItem('scoutForm'+entry);
 	var qrelement = document.getElementById('qrcode');
 	var generatedQR = new QRious({
@@ -36,23 +25,15 @@ function qrGenerate() {
 }
 
 function advanceQR() {
-	entry += 1
-	if (entry == entries) {
-		entry = 0;
+	currententry += 1
+	if (currententry == entries) {
+		currententry = 0;
 	}
-	qrGenerate();
-	var isScannedElement = document.getElementById('scanned');
-	var scannedforms = storage.getItem('scannedForms');
-	var isScanned = false;
-	console.log(scannedforms.toString().search(entry))
-	if (scannedforms.toString().search(entry)) {
-		isScanned = true;
-	}
-	isScannedElement.innerHTML = 'Scanned: '+isScanned;
+	qrGenerate(currententry);
 }
 
+document.addEventListener('DOMContentLoaded', advanceQR);
 document.addEventListener('DOMContentLoaded', function buttonPress(){
 	document.getElementById('nextQR').addEventListener("click", advanceQR);
 	document.getElementById('markScanned').addEventListener('click', markScanned);
-	advanceQR();
 });
