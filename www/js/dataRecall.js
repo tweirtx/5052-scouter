@@ -19,7 +19,7 @@ for (var i in storage) {
 
 function markScanned() {
 	var currentlyRead = storage.getItem('scannedForms');
-	var newScannedForms = String(Number(currententry)+entry);
+	var newScannedForms = currententry+entry;
 	storage.setItem('scannedForms', newScannedForms);
 	alert('Successfully marked as scanned')
 }
@@ -43,9 +43,11 @@ function advanceQR() {
 	qrGenerate();
 	var isScannedElement = document.getElementById('scanned');
 	var scannedforms = storage.getItem('scannedForms');
-	var isScanned = false;
-	console.log(scannedforms.toString().search(entry))
-	if (scannedforms.toString().search(entry)) {
+	var isScanned = scannedforms.toString().search(entry);
+	if (isScanned == -1) {
+		isScanned = false;
+	}
+	else {
 		isScanned = true;
 	}
 	isScannedElement.innerHTML = 'Scanned: '+isScanned;
