@@ -19,7 +19,7 @@ for (var i in storage) {
 
 function markScanned() {
 	var currentlyRead = storage.getItem('scannedForms');
-	var newScannedForms = currententry+entry;
+	var newScannedForms = currentlyRead+entry;
 	storage.setItem('scannedForms', newScannedForms);
 	alert('Successfully marked as scanned')
 }
