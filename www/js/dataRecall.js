@@ -53,8 +53,14 @@ function advanceQR() {
 	isScannedElement.innerHTML = 'Scanned: '+isScanned;
 }
 
+function scannedFormsFix() {
+	storage.setItem('scannedForms', '');
+	alert("Scanned form fix implemented, please back out of this page and come back");
+}
+
 document.addEventListener('DOMContentLoaded', function buttonPress(){
 	document.getElementById('nextQR').addEventListener("click", advanceQR);
 	document.getElementById('markScanned').addEventListener('click', markScanned);
+	document.getElementById('fixScannedForms').addEventListener("click", scannedFormsFix);
 	advanceQR();
 });
