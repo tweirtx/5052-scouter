@@ -29,6 +29,7 @@ function formCalc() {
 	console.log(finalKeys)
 	var finalKeysString = finalKeys.toString();
 	storage.setItem('scoutForm'+newentry, finalKeysString);
+	window.sessionStorage.setItem('instantRecall', finalKeysString)
 	alert("Form calculated");
 	resetForm();
 }
