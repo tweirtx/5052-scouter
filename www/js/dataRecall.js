@@ -40,6 +40,8 @@ function advanceQR() {
 	if (entry == entries) {
 		entry = 0;
 	}
+	var counter = document.getElementById('counter');
+	counter.innerHTML = "Code "+entry;
 	qrGenerate();
 	var isScannedElement = document.getElementById('scanned');
 	var scannedforms = storage.getItem('scannedForms');
