@@ -9,4 +9,4 @@ Make system to keep track of scanned QR codes (localStorage array with scanned e
 Make an easy button to reset the form (and do it automatically) DONE
 Add number of power cubes used in a match DONE
 
-TEST EVERYTHING
+
